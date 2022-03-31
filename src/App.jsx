@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './Components/NavBar.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from './Components/Container';
+import ItemListContainer from './Components/ItemListContainer';
+
 
 function App() {
   return (
@@ -9,6 +12,8 @@ function App() {
     <div className="App">
       <section>
         <NavBar/>
+        <Container />
+        <ItemListContainer />
       </section>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
