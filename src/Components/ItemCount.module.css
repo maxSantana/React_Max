@@ -1,0 +1,6 @@
+.counter{
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(3, 30px);
+
+}
