@@ -1,41 +1,18 @@
-import React, { useEffect} from 'react'
+import React from 'react'
+import Item from './Items/Item'
 
-const ItemList = () => {
-  
-    useEffect(() => {
+function ItemList(productos) {
 
-
-        let Array = [
-            {Id:1, name: 'Eric'},
-            {Id:2, name: 'Maxi'},                  
-            {Id:3, name: 'Raul'}
-        ]
-        const mostrarArray = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(Array)
-
-            }, 3000)
-            //reject(null)
-        })
-
-        console.log(mostrarArray);
-
-        mostrarArray.then((res) => {
-            console.log(res)
-        })
-        
-        console.log(mostrarArray)
-
-        //sigue....
-
-
-    }, [])
-
-  
-  
     return (
-    <div>ItemList</div>
-  )
+        productos.map(p => (
+            <Item
+                key={p.id}
+                nombre={p.nombre}
+                precio={p.precio}
+                imagen={p.imagen} />
+            )
+        )
+    )
 }
 
 export default ItemList

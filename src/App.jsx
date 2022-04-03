@@ -2,23 +2,20 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './Components/NavBar.jsx'
-import ItemListContainer from './Components/ItemListContainer';
-import ItemList from './Components/ItemList';
+import ItemListContainer from './Components/Items/ItemListContainer';
+
 
 
 function App() {
   return (
 
     <div className="App">
-      <section>
+     
         <NavBar/>
         <ItemListContainer/>
-       
-       
-      </section>
      
     </div>
-  );
+  )
 }
 
 export default App;
