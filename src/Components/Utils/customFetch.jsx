@@ -1,7 +1,7 @@
 
 let isOk = true;
 
-const customFetch = (time, task) => {
+function customFetch (time, task) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (isOk) {

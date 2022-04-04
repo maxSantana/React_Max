@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react'
-import ItemList from './Item'
+import ItemList from '../ItemList';
 import customFetch from '../Utils/customFetch';
 import productos from '../Productos';
 
 function ItemListContainer () {
 
-  const [items, setItems] = useState([]);
+  const [item, setItems] = useState([]);
 
   useEffect(() => {
     customFetch(3000, productos)
       .then(resultado => setItems(resultado))
       .catch(err => console.log(err))
-  }, [items])
+  }, [item])
 
   return ( 
     <div>
-      <ItemList productos={items}/>
+     <ItemList productos={item}/>
     </div>
   )
 }

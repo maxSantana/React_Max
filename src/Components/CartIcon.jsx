@@ -7,7 +7,6 @@ const CartIcon = () => {
   return (
    <>
    <FontAwesomeIcon icon={faCartShopping} />
-   <FontAwesomeIcon icon="fa-thin fa-cart-shopping" />
    </>
   )
 }
