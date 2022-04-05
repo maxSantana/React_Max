@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ItemList from '../ItemList';
 import customFetch from '../Utils/customFetch';
 import productos from '../Productos';
+import s from './ItemListContainer.module.css'
 
 function ItemListContainer () {
 
@@ -14,9 +15,11 @@ function ItemListContainer () {
   }, [item])
 
   return ( 
-    <div>
-     <ItemList productos={item}/>
-    </div>
+    <div className={s.ContainerI}>
+               <ItemList productos={item} />
+       
+    </div >
+    
   )
 }
 

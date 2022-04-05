@@ -1,10 +1,11 @@
 import React from 'react'
 import Item from './Items/Item'
 
-function ItemList(productos) {
+function ItemList({productos}) {
 
     return (
-        productos.map (p => (
+        
+        productos.map(p => (
             <Item
                 key={p.index}
                 nombre={p.nombre}
