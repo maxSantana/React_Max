@@ -1,21 +1,21 @@
-import React from 'react'
 
+import React from 'react'
 import Card from 'react-bootstrap/Card'
 import ItemCount from '../ItemCount'
+import s from './Item.module.css'
 
-
-function Item ({index, nombre, precio, imagen}) {
+export function Item (productos) {
   return (
-    <div>
+    <div className={s.Cards}>
       
-            <Card key={index} style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={imagen} />
+            <Card key={productos.id}>
+              <Card.Img variant="top" src={productos.imagen} />
               <Card.Body>
-                <Card.Title>{nombre}</Card.Title>
+                <Card.Title>{productos.nombre}</Card.Title>
                 <Card.Text>
-                  {precio}
+                  PRECIO: $ {productos.precio}
                 </Card.Text>
-                <ItemCount initial={1} stock={8} />
+                CANTIDAD: <ItemCount initial={1} stock={8} />
               </Card.Body>
             </Card>
           
@@ -23,4 +23,3 @@ function Item ({index, nombre, precio, imagen}) {
   )
 }
 
-export default Item

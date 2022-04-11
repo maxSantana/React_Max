@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button'
-const ItemCount = ({initial, stock}) => {
+import { Link } from 'react-router-dom';
+
+
+ const ItemCount = ({initial, stock}) => {
 
       const [counter, setCounter] = useState(initial);
 
@@ -14,20 +17,20 @@ const ItemCount = ({initial, stock}) => {
                 setCounter (counter - 1)
             }
           }
-      const Reset = () => {
-            setCounter(1);
-          }
+        
   return (
-    <>
+    <> 
+     
     <div className="counter">
+   
           <div className="counter_">{counter}</div>
           <Button className="Incremento" onClick={Incremento} variant="success">+</Button>
+          <Link to="/ItemDetail">Ver Detalles</Link>
           <Button className="Decremento" onClick={Decremento} variant="danger">-</Button>
-          <Button className="Reset" onClick={Reset}>Reset</Button>
+          
     </div>
     </>
   )
 }
 
 export default ItemCount;
-
