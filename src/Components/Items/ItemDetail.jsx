@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-function ItemDetail({prod}) {
+function ItemDetail({id, nombre, imagen, specs}) {
   return (
-    <div>
-      <img src={prod.imagen} alt={prod.nombre} />
-      <h2>{prod.id}{prod.nombre}</h2>
-      <p>{prod.specs}</p>
+    <div key={id}>
+      <img src={imagen} alt={nombre} />
+      <h2>{nombre}</h2>
+      <p>{specs}</p>
     </div>
   )
 }
