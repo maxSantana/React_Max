@@ -25,7 +25,6 @@ import { Link } from 'react-router-dom';
    
           <div className="counter_">{counter}</div>
           <Button className="Incremento" onClick={Incremento} variant="success">+</Button>
-          <Link to="/ItemDetail">Ver Detalles</Link>
           <Button className="Decremento" onClick={Decremento} variant="danger">-</Button>
           
     </div>

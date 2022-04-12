@@ -1,11 +1,11 @@
 import { productos } from '../Productos'
 
 export default function detailProduct(id) {
-  return ( new Promise ((resolve, reject)=>{
+  return ( new Promise ((resolve, reject) => {
       setTimeout(()=>{
-          let articleFilter = productos.filter(e => e.id === id);
-          if (articleFilter[0]) {
-              resolve(articleFilter[0]);
+          let filtro = productos.filter(e => e.id === id);
+          if (filtro[0]) {
+              resolve(filtro[0]);
           } else {
               reject("error")
           }
