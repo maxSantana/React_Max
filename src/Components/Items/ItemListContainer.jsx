@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ItemList from '../ItemList';
 import {traerProductos} from '../Productos';
 import s from './ItemListContainer.module.css'
+import ItemCount from '../ItemCount';
 
 function ItemListContainer () {
 
@@ -18,7 +19,7 @@ function ItemListContainer () {
       <br />
       <div className={s.ContainerI}>
      
-          <ItemList product={item} />
+          {/*<ItemCount product={item} /> */}
       
       </div >
     </>

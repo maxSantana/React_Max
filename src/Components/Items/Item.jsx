@@ -13,7 +13,7 @@ export function Item (productos) {
               <Card.Img variant="top" src={productos.imagen} />
               <Card.Body>
                 <Card.Title>{productos.nombre}</Card.Title>
-                <Link to="/ItemDetail/:id">Ver Detalles</Link>
+                <Link to={`/ItemDetail/:ItemDetailId`}>Ver Detalles</Link>
                 <Card.Text>
                 PRECIO: $ {productos.precio}
                 </Card.Text>

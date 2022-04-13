@@ -496,6 +496,45 @@ export const productos = [
 
 ]
 
+
+export const producto = {
+    id: 1,
+    nombre: 'Fender FSR American Pro Strat HSS Rose Gold RW Neck',
+    precio: 1400,
+    imagen: 'https://images.guitarguitar.co.uk/cdn/large/150/190301340084008f.jpg',
+    categoria: 'Fender',
+    subCategoria: 'Stratocaster',
+    specs: [
+        'BodyWood: Alder Body_',
+        'Finish: Gloss Urethane_',
+        'Orientation: Right handed_',
+        'NeckShape: Deep C_',
+        'NeckWood: Solid Rosewood_',
+        'ScaleLength: 25.5″_',
+        'Radius: 9.5″_',
+        'FretSize: Tall Narrow_',
+        'NumberFrets: 22_',
+        'Inlays: Dot_',
+        'NutWidth: 1.69″ (43mm)_',
+        'Configuration: HSS Special Electronics Dual 250K/500K Volume Potentiometer_',
+        'Neck: V-Mod single-coil Strat®_',
+        'Middle: V-Mod single-coil Strat®_',
+        'Bridge: Shawbucker_',
+        'ControlsLayout: Master Volume with Treble-Bleed, Tone 1. (Neck/Middle Pickups), Tone 2. (Bridge Pickup)_ ',
+        'PickupSwitch: 5-way_',
+        'BridgeType_Tremolo/Vibrato_',
+        'BridgeDesign: Two-point synchronized tremolo_',
+        'TuningMachines: Staggered_',
+        'Color: Chrome_',
+        'Case: Hardshell case with key_',
+        'Accessories: Tools, bridge cover, ephemera_'
+    ]
+}
+
+
+
+
+
 export const traerProductos = () => {
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
@@ -504,3 +543,10 @@ export const traerProductos = () => {
     })
 }
 
+export const traerProducto = () => {
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve(producto)
+        }, 2000);
+    })
+}

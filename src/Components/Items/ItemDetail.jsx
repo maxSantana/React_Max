@@ -1,12 +1,19 @@
 import React from 'react'
 
 
-function ItemDetail({id, nombre, imagen, specs}) {
+function ItemDetail( {details} ) {
   return (
-    <div key={id}>
-      <img src={imagen} alt={nombre} />
-      <h2>{nombre}</h2>
-      <p>{specs}</p>
+    <div key={details.id} className='container d-flex justify-center mt-5'>
+      <div className='card' style={{ maxWidth: '40rem' }}>
+        <div className='row'>
+          <div className='col-12'>
+            <img src={details.imagen} alt={details.nombre} />
+            <h2>{details.nombre}</h2>
+            <p>{details.specs}</p>
+            <h3>Hola</h3>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

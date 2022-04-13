@@ -1,0 +1,34 @@
+[
+    {
+    "id": 1,
+    "nombre": "Fender FSR American Pro Strat HSS Rose Gold RW Neck",
+    "precio": 1400,
+    "imagen": "https://images.guitarguitar.co.uk/cdn/large/150/190301340084008f.jpg",
+    "categoria": "Fender",
+    "subCategoria": "Stratocaster",
+    "specs": {
+        "BodyWood": "'Alder Body'",
+        "Finish": "'Gloss Urethane'",
+        "Orientation": "'Right handed'",
+        "NeckShape": "Deep C",
+        "NeckWood": "Solid Rosewood",
+        "ScaleLength": "25.5″",
+        "Radius": "9.5″",
+        "FretSize": "Tall Narrow",
+        "NumberFrets": 22,
+        "Inlays": "Dot",
+        "NutWidth": "1.69″ (43mm)",
+        "Configuration": "HSS Special Electronics Dual 250K/500K Volume Potentiometer",
+        "Neck": "V-Mod single-coil Strat®",
+        "Middle": "V-Mod single-coil Strat®",
+        "Bridge": "Shawbucker",
+        "ControlsLayout": "Master Volume with Treble-Bleed, Tone 1. (Neck/Middle Pickups), Tone 2. (Bridge Pickup)",
+        "PickupSwitch": "5-way",
+        "BridgeType": "Tremolo/Vibrato",
+        "BridgeDesign": "Two-point synchronized tremolo",
+        "TuningMachines": "Staggered",
+        "Color": "Chrome",
+        "Case": "Hardshell case with key",
+        "Accessories": "Tools, bridge cover, ephemera"
+    }
+} ]
