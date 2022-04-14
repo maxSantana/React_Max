@@ -1,19 +1,29 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
-import { traerProducto } from '../Productos'
+import customFetch from '../Utils/customFetch'
+import { productos } from '../Productos'
 
 
-const ItemDetailContainer = () => {
+
+function ItemDetailContainer () {
   
-  const [details, setDetails] = useState ({})
+  const [item, setItem] = useState ([])
 
   useEffect(() => {
-    traerProducto()
-      .then(resultado => setDetails(resultado))
-      .catch(err => console.log(err))
-  }, [details])
+    customFetch(2000, productos)
+      .then(resultado => setItem(resultado.find(item => item.id === 1)))
+      
+  }, [])
+  console.log(item)
+
     return (
-    <ItemDetail details={details}/>
+  
+      <div>
+        <ItemDetail key={item.id} 
+                    nombre={item.nombre} 
+                    imagen={item.imagen} 
+                    specs={item.specs}/>
+      </div>
   )
 }
 

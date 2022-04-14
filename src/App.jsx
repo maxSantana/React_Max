@@ -16,7 +16,7 @@ function App() {
       {/* <Footer/> */}
       
 
-      <ItemListContainer/>
+     {/*} <ItemListContainer/> */ }
     
       <ItemDetailContainer/>
       

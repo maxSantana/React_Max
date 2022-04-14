@@ -1,20 +1,25 @@
 import React from 'react'
+import Card from 'react-bootstrap/Card'
+import s from './Item.module.css'
 
-
-function ItemDetail( {details} ) {
+function ItemDetail({id, nombre, specs, imagen} ) {
   return (
-    <div key={details.id} className='container d-flex justify-center mt-5'>
-      <div className='card' style={{ maxWidth: '40rem' }}>
-        <div className='row'>
-          <div className='col-12'>
-            <img src={details.imagen} alt={details.nombre} />
-            <h2>{details.nombre}</h2>
-            <p>{details.specs}</p>
-            <h3>Hola</h3>
-          </div>
-        </div>
-      </div>
+    <div className={s.Cards}>
+      
+            <Card key={id}>
+              <Card.Img variant="top" src={imagen} />
+              <Card.Body>
+                <Card.Title>{nombre}</Card.Title>
+              
+                <Card.Text>
+                Specs: {specs}
+                </Card.Text>
+                
+              </Card.Body>
+            </Card>
+          
     </div>
+
   )
 }
 
