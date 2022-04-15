@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
-
 import { traerProducto } from '../Productos'
 import { useParams } from 'react-router-dom'
 
@@ -12,8 +11,8 @@ function ItemDetailContainer () {
   const { id } = useParams();
   console.log(id)
   useEffect(() => {
-    traerProducto(id)
-      .then(resultado => setItem(resultado.find(p=> p.id === id)))
+    traerProducto(parseInt(id))
+      .then(resultado => setItem(resultado))
       
   }, [id])
   console.log(item)

@@ -1,6 +1,6 @@
 export const productos = [
     {
-        id: '1',
+        id: 1,
         nombre: 'Fender FSR American Pro Strat HSS Rose Gold RW Neck',
         precio: 1400,
         imagen: 'https://images.guitarguitar.co.uk/cdn/large/150/190301340084008f.jpg',
@@ -34,7 +34,7 @@ export const productos = [
             ]
     },
     {
-        id: '2',
+        id: 2,
         nombre: 'Fender American Professional II Stratocaster Mystic Surf Green Rosewood Fingerboard',
         precio: 1400,
         imagen: 'https://images.guitarguitar.co.uk/cdn/large/160/200723360434025f.jpg',
@@ -57,7 +57,7 @@ export const productos = [
         ]
     },
     {
-        id: '3',
+        id: 3,
         nombre: 'Fender Limited Edition American Pro Strat Rosewood Neck Fiesta Red',
         precio: 1700,
         imagen: 'https://images.guitarguitar.co.uk/cdn/large/150/200107353593008f.jpg',
@@ -493,6 +493,75 @@ export const productos = [
             Inlay: 'Pia',
             SideDots: 'Luminlay'
         } 
+    },
+    {
+        id: 21,
+        nombre: 'PRS 408 Fire Red',
+        precio: 3700,
+        imagen: 'https://images.guitarguitar.co.uk/cdn/large/160/200408358624003f.jpg',
+        categoria: 'Paul Reed Smith',
+        subCategoria: '408',
+        specs: [
+                    'Body: One Piece Mahogany with Flame Maple Top',
+                    'Neck: Mahogany',
+                    'NeckShape: Pattern',
+                    'Fingerboard: Rosewood',
+                    'Scale: 25"',
+                    'Frets:	22',
+                    'Nut Width:	1 11/16"',
+                    'Pickups: PRS 408 Set',
+                    'Controls: Volume and Tone Control with 3 - way Blade Pickup Switch and Two Mini- Toggle Coil Tap Switches',
+                    'Bridge:	PRS Patented Tremolo, Gen III',
+                    'Tuners:	PRS Phase III Locking'
+        ]
+            
+         
+    },
+    {
+        id: 22,
+        nombre: 'PRS 408 Charcoal Burst',
+        precio: 3700,
+        imagen: 'https://images.guitarguitar.co.uk/cdn/large/160/200408358623003f.jpg',
+        categoria: 'Paul Reed Smith',
+        subCategoria: '408',
+        specs: [
+                    'Body: One Piece Mahogany with Flame Maple Top',
+                    'Neck: Mahogany',
+                    'NeckShape: Pattern',
+                    'Fingerboard: Rosewood',
+                    'Scale: 25"',
+                    'Frets:	22',
+                    'Nut Width:	1 11/16"',
+                    'Pickups: PRS 408 Set',
+                    'Controls: Volume and Tone Control with 3 - way Blade Pickup Switch and Two Mini- Toggle Coil Tap Switches',
+                    'Bridge:	PRS Patented Tremolo, Gen III',
+                    'Tuners:	PRS Phase III Locking'
+        ]
+            
+         
+    },
+    {
+        id: 23,
+        nombre: 'PRS Limited Edition Custom 24 Wood Library Custom Colour 10 Top Blue Burst Fade Pattern Thin #0322853',
+        precio: 5499,
+        imagen: 'https://images.guitarguitar.co.uk/cdn/large/160/200408358623003f.jpg',
+        categoria: 'Paul Reed Smith',
+        subCategoria: '408',
+        specs: [
+                    'Body: One Piece Mahogany with Flame Maple Top',
+                    'Neck: Mahogany',
+                    'NeckShape: Pattern',
+                    'Fingerboard: Rosewood',
+                    'Scale: 25"',
+                    'Frets:	22',
+                    'Nut Width:	1 11/16"',
+                    'Pickups: PRS 408 Set',
+                    'Controls: Volume and Tone Control with 3 - way Blade Pickup Switch and Two Mini- Toggle Coil Tap Switches',
+                    'Bridge:	PRS Patented Tremolo, Gen III',
+                    'Tuners:	PRS Phase III Locking'
+        ]
+            
+         
     }
 
 ]
