@@ -1,6 +1,6 @@
 export const productos = [
     {
-        id: 1,
+        id: '1',
         nombre: 'Fender FSR American Pro Strat HSS Rose Gold RW Neck',
         precio: 1400,
         imagen: 'https://images.guitarguitar.co.uk/cdn/large/150/190301340084008f.jpg',
@@ -34,7 +34,7 @@ export const productos = [
             ]
     },
     {
-        id: 2,
+        id: '2',
         nombre: 'Fender American Professional II Stratocaster Mystic Surf Green Rosewood Fingerboard',
         precio: 1400,
         imagen: 'https://images.guitarguitar.co.uk/cdn/large/160/200723360434025f.jpg',
@@ -57,7 +57,7 @@ export const productos = [
         ]
     },
     {
-        id: 3,
+        id: '3',
         nombre: 'Fender Limited Edition American Pro Strat Rosewood Neck Fiesta Red',
         precio: 1700,
         imagen: 'https://images.guitarguitar.co.uk/cdn/large/150/200107353593008f.jpg',
@@ -402,7 +402,7 @@ export const productos = [
         precio: 2199,
         imagen: 'https://images.guitarguitar.co.uk/cdn/large/160/180108320390008f.jpg',
         categoria: 'Ibanez',
-        subCategoria: 'JS - Pia',
+        subCategoria: 'JSPIA',
         specs:{
             
                 Body: 'Basswood',
@@ -428,7 +428,7 @@ export const productos = [
         precio: 2199,
         imagen: 'https://images.guitarguitar.co.uk/cdn/large/130/14123110595158f.jpg',
         categoria: 'Ibanez',
-        subCategoria: 'JS - Pia',
+        subCategoria: 'JSPIA',
         specs: {
 
             Body: 'Alder Body',
@@ -448,7 +448,7 @@ export const productos = [
         precio: 3499,
         imagen: 'https://images.guitarguitar.co.uk/cdn/large/170/210121366235025f.jpg',
         categoria: 'Ibanez',
-        subCategoria: 'JS - Pia',
+        subCategoria: 'JSPIA',
         specs: {
             Body: 'Alder',
             NeckType: 'PIA 5pc Maple/ Walnut',
@@ -474,7 +474,7 @@ export const productos = [
         precio: 3499,
         imagen: 'https://images.guitarguitar.co.uk/cdn/large/160/200123354610008f.jpg',
         categoria: 'Ibanez',
-        subCategoria: 'JS - Pia',
+        subCategoria: 'JSPIA',
         specs: {
             Body: 'Alder',
             NeckType: 'PIA 5pc Maple/ Walnut',
@@ -498,56 +498,25 @@ export const productos = [
 ]
 
 
-export const producto = {
-    id: 1,
-    nombre: 'Fender FSR American Pro Strat HSS Rose Gold RW Neck',
-    precio: 1400,
-    imagen: 'https://images.guitarguitar.co.uk/cdn/large/150/190301340084008f.jpg',
-    categoria: 'Fender',
-    subCategoria: 'Stratocaster',
-    specs: [
-        'BodyWood: Alder Body_',
-        'Finish: Gloss Urethane_',
-        'Orientation: Right handed_',
-        'NeckShape: Deep C_',
-        'NeckWood: Solid Rosewood_',
-        'ScaleLength: 25.5″_',
-        'Radius: 9.5″_',
-        'FretSize: Tall Narrow_',
-        'NumberFrets: 22_',
-        'Inlays: Dot_',
-        'NutWidth: 1.69″ (43mm)_',
-        'Configuration: HSS Special Electronics Dual 250K/500K Volume Potentiometer_',
-        'Neck: V-Mod single-coil Strat®_',
-        'Middle: V-Mod single-coil Strat®_',
-        'Bridge: Shawbucker_',
-        'ControlsLayout: Master Volume with Treble-Bleed, Tone 1. (Neck/Middle Pickups), Tone 2. (Bridge Pickup)_ ',
-        'PickupSwitch: 5-way_',
-        'BridgeType_Tremolo/Vibrato_',
-        'BridgeDesign: Two-point synchronized tremolo_',
-        'TuningMachines: Staggered_',
-        'Color: Chrome_',
-        'Case: Hardshell case with key_',
-        'Accessories: Tools, bridge cover, ephemera_'
-    ]
-}
 
 
 
 
-
-export const traerProductos = () => {
+export const traerProductos = (categoriaId) => {
     return new Promise((resolve, reject)=>{
+        const prodFiltrados = productos.filter(p => p.subCategoria  === categoriaId)
         setTimeout(()=>{
-            resolve(productos)
-        }, 2000);
+            categoriaId ? resolve (prodFiltrados) : resolve (productos)
+            
+        }, 500);
     })
 }
 
-export const traerProducto = () => {
+export const traerProducto = (id) => {
     return new Promise((resolve, reject)=>{
+        const prodId = productos.find(p => p.id === id)
         setTimeout(()=>{
-            resolve(producto)
-        }, 2000);
+            id ? resolve (prodId) : resolve (productos)
+        }, 500);
     })
 }

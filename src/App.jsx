@@ -11,16 +11,18 @@ function App() {
   return (
         
     <div className="App">
-      
+      <BrowserRouter>
       <NavBar/>
-      {/* <Footer/> */}
-      
+        <Routes>
+          <Route exact path="/" element={<ItemListContainer />}/>
+          <Route exact path="/categoria/:categoriaId" element={<ItemListContainer />} />
+          <Route exact path="/item/:id" element={<ItemDetailContainer />} /> 
+     {/* <Route path="/Cart" element={<Cart/>}/> */}
 
-     {/*} <ItemListContainer/> */ }
-    
-      <ItemDetailContainer/>
       
-   
+      </Routes>
+      {/* <Footer/> */}
+      </BrowserRouter>
     </div>
   )
 }
