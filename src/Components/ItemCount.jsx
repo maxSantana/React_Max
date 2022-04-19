@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import { Form, Col, Container, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom';
 
+ const ItemCount = ({stock, onAdd}) => {
 
- const ItemCount = ({initial, stock}) => {
-
-      const [counter, setCounter] = useState(initial);
+      const [counter, setCounter] = useState(0);
 
       const Incremento = () =>{
             if (counter < stock){
@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
             }
           };
       const Decremento = () => {
-            if (counter > initial){
+            if (counter > 0){
                 setCounter (counter - 1)
             }
           }
@@ -23,10 +23,25 @@ import { Link } from 'react-router-dom';
      
     <div className="counter">
    
-          <div className="counter_">{counter}</div>
-          <Button className="Incremento" onClick={Incremento} variant="success">+</Button>
-          <Button className="Decremento" onClick={Decremento} variant="danger">-</Button>
-          
+        <Container>
+          <Row>
+            <Col>
+              <Button className="Incremento" onClick={Incremento} variant="success" size="lg">+</Button>
+            </Col>
+            <Col>
+            <Form.Control placeholder={counter}/>
+            </Col>
+            <Col>
+              <Button className="Decremento" onClick={Decremento} variant="danger" size="lg">-</Button>
+            </Col>
+            <Col>
+              <Button onClick={() => onAdd(counter)} variant="danger" size="lg">Add to cart</Button>
+            </Col>
+            <Col>
+              <Button variant="danger" size="lg"><Link to="/Cart">Ir al carrito</Link></Button>
+            </Col>
+          </Row>
+        </Container>
     </div>
     </>
   )
