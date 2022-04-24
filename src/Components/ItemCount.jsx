@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Form, Col, Container, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button'
-import { Link } from 'react-router-dom';
 
- const ItemCount = ({stock, onAdd}) => {
-
+ const ItemCount = ({stock, handleOnAdd}) => {
+     
       const [counter, setCounter] = useState(0);
 
       const Incremento = () =>{
@@ -26,19 +25,13 @@ import { Link } from 'react-router-dom';
         <Container>
           <Row>
             <Col>
-              <Button className="Incremento" onClick={Incremento} variant="success" size="lg">+</Button>
+              <Button className="Incremento" onClick={Incremento} variant="success" size="sm">+</Button>
             </Col>
             <Col>
             <Form.Control placeholder={counter}/>
             </Col>
             <Col>
-              <Button className="Decremento" onClick={Decremento} variant="danger" size="lg">-</Button>
-            </Col>
-            <Col>
-              <Button onClick={() => onAdd(counter)} variant="danger" size="lg">Add to cart</Button>
-            </Col>
-            <Col>
-              <Button variant="danger" size="lg"><Link to="/Cart">Ir al carrito</Link></Button>
+              <Button className="Decremento" onClick={Decremento} variant="danger" size="sm">-</Button>
             </Col>
           </Row>
         </Container>

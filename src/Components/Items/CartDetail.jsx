@@ -3,7 +3,7 @@ import { CartContext } from './CartContext'
 import { Link } from 'react-router-dom'
 
 const CartDetail = () => {
-    const { cart, removeFromCart, buyAll } = useContext(CartContext)
+    const { cart, removeFromCart} = useContext(CartContext)
 
     console.log(cart)
   return (

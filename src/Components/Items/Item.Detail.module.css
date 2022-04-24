@@ -1,9 +1,14 @@
 .imagen{
     margin: 0 auto;
-    height: 700px;
-    width: 30%;
+    width: 100%;
 }
-.Text{
-    color: whitesmoke;
-    font-size: 25px;
+.titulos{
+    font-size: 30px;
+}
+.boton{
+    font-size: 15px;
+    text-decoration: none;
+}
+.text{
+    margin: 0 auto;
 }
