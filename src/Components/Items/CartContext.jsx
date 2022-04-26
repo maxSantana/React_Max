@@ -12,7 +12,7 @@ const CartContextProvider = ({ children }) => {
 
 
   const addToCart = (item, quantity) => {
-        console.log(item)
+       
               if (isInCart(item.id)) {
                 const newCart = cart.map(cartElement => {
                   if (cartElement.id === item.id) {
@@ -30,9 +30,15 @@ const CartContextProvider = ({ children }) => {
     
     const clearCart = () => setCart([]);
 
+    const cant = () => {
+      return cart.reduce((total, item) => total + item.counter*item.precio, 0)
+    }
+    const cantItems = () => {
+      return cart.reduce((total, item) => total + item.counter, 0)
+    }
   
   return (
-            <CartContext.Provider value={{cart, setCart, addToCart, removeFromCart, clearCart}}>
+            <CartContext.Provider value={{cart, setCart, addToCart, removeFromCart, clearCart, cant, cantItems}}>
               {children}
             </CartContext.Provider>
           )

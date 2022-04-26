@@ -13,9 +13,7 @@ function ItemDetail({id, nombre, precio, specs, imagen, imagen2, texts,
                       titulo7, titulo8, descripcion8, titulo9, descripcion9, 
                       titulo10, descripcion10, titulo11, descripcion11, titulo12, descripcion12,  } ) {
 
-const { addToCart } = useCartContext()
-
-// const [cantidad, setCantidad] = useState(0);
+const { addToCart } = useCartContext()    
 
 function handleOnAdd (q){
   addToCart({id, nombre, precio, specs, imagen, imagen2, texts, 
@@ -26,7 +24,7 @@ function handleOnAdd (q){
               titulo10, descripcion10, titulo11, descripcion11, 
               titulo12, descripcion12,}, q)
   
-}
+                  }
 
   return (
     <Container fluid>
@@ -39,9 +37,8 @@ function handleOnAdd (q){
                       </Card>
                 </Row>
                 <Row>
-                            <div><ItemCount stock={5} />
-                              <Button variant="danger" size="sm" onClick={handleOnAdd} className={s.boton}>Agregar al carrito</Button>
-                              <Button variant="danger" size="sm"><Link to="/Cart"      className={s.boton}>Ir al carrito</Link></Button>
+                            <div><ItemCount stock={5} onAdd={handleOnAdd}/>
+                              
                             </div>
                 </Row>
               </Col>
