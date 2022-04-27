@@ -1,46 +1,57 @@
-import React, { useContext } from 'react'
-import { CartContext } from './CartContext'
-import { Link } from 'react-router-dom'
+import React, {useContext} from 'react';
+import ListGroup from 'react-bootstrap/ListGroup';
+import { ListGroupItem } from "react-bootstrap";
+import Button from 'react-bootstrap/Button';
+import { CartContext } from './CartContext';
+import { Link } from 'react-router-dom';
+import s from '../Items/Item.Detail.module.css'
+import { Container, Row } from 'react-bootstrap';
 
-const CartDetail = () => {
-    const { cart, removeFromCart} = useContext(CartContext)
+export default function CartDetail() {
 
-    console.log(cart)
+  const {cart, removeFromCart, buyAll} = useContext(CartContext);
+  console.log(cart);
+
   return (
-  <>
-
-            <div>
-                <h1>SHopping Cart</h1>
-                <h2>{cart.lenght}</h2>
-            </div>
-            <div>
-                <h3>Detalle de productos</h3>
-                <h3>Cantidad</h3>
-                <h3>Precio</h3>
-                <h3>Total</h3>
-            </div>
-            <div>
-                {cart.lenght > 0 && cart.map((item) => (
-                    <div>
-                        <img className='h-24' src={item.image} alt='algo' />
-                        <button onClick={() => removeFromCart(item.id)}> Remove </button>
-                    </div>
-                ))}
-
-            </div>
-            <div>
-             
-              <Link to="/">Continue comprando </Link>
-            </div>
-            <div>
-                <h1>Resumen</h1>
-                <div>
-                    <span >Items 1</span>
-                    <span >$10</span>
-                </div>
-            </div>
-            
-        </>)
+    <>
+    <Container fluid>
+    <h1>Cart shopping</h1>
+        <Row md={2}>
+               
+                <ListGroup as="ol">
+                <div> {cart.length > 0 ? cart.map(item => 
+                        
+                            <ListGroup.Item as="li" className="d-flex justify-content-between align-items-start">
+                                   
+                                            <img src={item.imagen} alt="asd" className={s.imagen1}/> 
+                                    
+                                    
+                                            <div className="ms-2 me-auto">
+                                       
+                                                <div className="fw-bold">{item.nombre}</div>
+                                                <div className="fw-bold">{item.texts}</div>
+                                                <div> $ {item.precio} - Cantidad: {item.quantity}</div>
+                                                <Button variant="outline-secondary" onClick={() => removeFromCart(item.id)}>Eliminar</Button>
+                                            </div>
+                                    
+                            
+                           
+                            </ListGroup.Item> ) : <div><Button as={Link} to="/" variant="outline-success">Back to shop</Button> <br/> 
+                                
+                        <h1>The cart is empty</h1>
+                        </div> }
+                        </div>
+                </ListGroup>
+                
+                            { cart.length > 0 && 
+                        <div>
+                            <hr/>
+                            <Button variant="outline-success" onClick={() => buyAll()}>Buy Everything</Button>
+                            <hr/>
+                            <Button variant="outline-secondary" onClick={() => buyAll()}>Clean cart</Button>
+                        </div>}
+            </Row>  
+        </Container>
+    </>
+  )
 }
-
-export default CartDetail

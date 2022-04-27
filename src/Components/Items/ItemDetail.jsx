@@ -1,11 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Accordion, Col, Container, Row } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 import s from '../Items/Item.Detail.module.css'
 import ItemCount from '../ItemCount'
 import { useCartContext } from './CartContext'
-import Button from 'react-bootstrap/Button'
-import { Link } from 'react-router-dom';
+
 
 function ItemDetail({id, nombre, precio, specs, imagen, imagen2, texts, 
                       titulo1, descripcion1, titulo2, descripcion2, titulo3, descripcion3, 
