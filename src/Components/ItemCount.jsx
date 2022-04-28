@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom';
 
 
-export default function ItemCount ({stock, onAdd}) {
+export default function ItemCount ({stock, addToCart, count, producto, setCantidad, onAdd}) {
      
       const [counter, setCounter] = useState(0);
 
@@ -23,14 +23,14 @@ export default function ItemCount ({stock, onAdd}) {
               <Button className="Incremento" onClick={Incremento} variant="success" size="sm">+</Button>
             </Col>
             <Col>
-            <Button variant="danger" size="sm" onClick={()=> onAdd(counter)} >Agregar al carrito</Button>
+            <Button variant="danger" size="sm" onClick={()=>{onAdd(counter)}}>Agregar al carrito</Button>
             <Button variant="danger" size="sm"><Link to="/Cart"      >Ir al carrito</Link></Button>
             <Form.Control placeholder={counter}/>
             </Col>
             <Col>
               <Button className="Decremento" onClick={Decremento} variant="danger" size="sm">-</Button>
             </Col>
-          </Row>
+             </Row>
         </Container>
     </div>
     </>
