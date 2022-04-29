@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom';
 
 
-export default function ItemCount ({stock, addToCart, count, producto, setCantidad, onAdd}) {
+export default function ItemCount ({stock, onAdd}) {
      
       const [counter, setCounter] = useState(0);
 
