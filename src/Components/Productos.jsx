@@ -6,8 +6,8 @@ export const productos = [
         imagen: 'https://cdn.shopify.com/s/files/1/0244/0329/products/electric-guitar-fender-fsr-american-pro-hss-stratocaster-rose-gold-rosewood-neck-2.jpg?v=1627987178',
         imagen2: 'https://loviesguitars.com/wp-content/uploads/2021/02/IMG_9348.jpg',
         categoria: 'Fender',
-        subCategoria: 'Stratocaster',
-        texts: 'The Fender American Professional Stratocaster HSS ShawBucker is not a re-imagining of the classic design: it is the authentic original model, evolved. This Factory Special Run is a Limited Edition with a neck made entirely from Rosewood. Part of a Factory Special Run - This Limited Edition is outfitted with a solid Rosewood neck. Often copied, but never surpassed, the Stratocaster is arguably the world is most-loved electric guitar. Electrifying the music world since its release in 1954, its natural, versatile sound made the Stratocaster the benchmark for exceptional guitar tones.',
+        subcategoria: 'Stratocaster',
+        descripcion: 'The Fender American Professional Stratocaster HSS ShawBucker is not a re-imagining of the classic design: it is the authentic original model, evolved. This Factory Special Run is a Limited Edition with a neck made entirely from Rosewood. Part of a Factory Special Run - This Limited Edition is outfitted with a solid Rosewood neck. Often copied, but never surpassed, the Stratocaster is arguably the world is most-loved electric guitar. Electrifying the music world since its release in 1954, its natural, versatile sound made the Stratocaster the benchmark for exceptional guitar tones.',
         
         titulo1: 'V-Mod Pickups', 
         descripcion1: 'V-Mod Stratocaster pickups are engineered using a proprietary blend of alnico magnet types for the neck and middle pickups. Each pickup is voiced specifically for its position, creating high-output tone with vintage warmth and the crisp, clear sound that made Fender a legend.',
@@ -48,7 +48,7 @@ export const productos = [
         precio: 1400,
         imagen: 'https://cdn.shopify.com/s/files/1/0244/0329/products/FENDERAMPROiistratRWMYSTSFG-9_2000x.jpg?v=1644586864',
         categoria: 'Fender',
-        subCategoria: 'Stratocaster',
+        subcategoria: 'Stratocaster',
         specs: [
             /* The American Professional II Stratocaster draws from more than sixty years of innovation, inspiration and evolution to meet the demands of today s working player. Our popular Deep C neck now sports smooth rolled fingerboard edges, a Super-Natural satin finish and a newly sculpted neck heel for a supremely comfortable feel and easy access to the upper register. New V-Mod II Stratocaster single-coil pickups are more articulate than ever while retaining bell-like chime and warmth. An upgraded 2-point tremolo with a cold-rolled steel block increases sustain, clarity and high-end sparkle. The American Pro II Stratocaster delivers instant familiarity and sonic versatility you ll feel and hear right away, with broad ranging improvements that add up to nothing less than a new standard for professional instruments.
 
