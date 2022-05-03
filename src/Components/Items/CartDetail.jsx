@@ -29,7 +29,7 @@ export default function CartDetail() {
                                             <div className="ms-2 me-auto">
                                        
                                                 <div className="fw-bold">{item.nombre}</div>
-                                                <div className="fw-bold">{item.texts}</div>
+                                                <div className="fw-bold">{item.descripcion}</div>
                                                 <div> $ {item.precio} - Cantidad: {item.quantity}</div>
                                                 <Button variant="outline-secondary" onClick={() => removeFromCart(item.id)}>Eliminar</Button>
                                                 
