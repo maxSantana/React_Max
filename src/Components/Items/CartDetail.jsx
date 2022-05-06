@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { ListGroupItem, Badge } from "react-bootstrap";
+// import { ListGroupItem } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import { CartContext } from './CartContext';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ import { Container, Row } from 'react-bootstrap';
 
 export default function CartDetail() {
 
-  const {cart, clearCart, removeFromCart, removeOne, addOne, buyAll, valorTotal, totalItems} = useContext(CartContext);
+  const {cart, clearCart, removeFromCart, removeOne, addOne, buyAll, valorTotal,/* valorTotal, totalItems*/} = useContext(CartContext);
   console.log(cart);
 
   return (
@@ -23,15 +23,15 @@ export default function CartDetail() {
                         
                             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-start">
                                    
-                                            <img src={item.imagen} alt="asd" className={s.imagen1}/> 
+                                            <img src={item.imagen} alt="cargaImagen" className={s.imagen1}/> 
                                     
                                     
                                             <div className="ms-2 me-auto">
                                                 
                                                 <div className="fw-bold">{item.nombre}</div>
                                                 <div className="fw-bold">{item.descripcion}</div>
-                                                <div> $ {item.precio} - Cantidad: {item.count}</div>
-                                                <div className="fw-bold">{item.precio*item.count}</div>
+                                                <div> $ {item.precio} - Cantidad: {item.counter}</div>
+                                                <div className="fw-bold">{item.precio * item.counter}</div>
                                                 <Button variant="outline-secondary" onClick={() => addOne(item.id,item.stock)}>+</Button>
                                                 <Button variant="outline-secondary" onClick={() => removeFromCart(item.id)}>Eliminar</Button>
                                                 <Button variant="outline-secondary" onClick={() => removeOne(item.id)}>-</Button>
@@ -49,7 +49,7 @@ export default function CartDetail() {
                         <div>
                             <h2>Cantidad de Productos: {cart.length}</h2>  
                             <p>Total: $ {valorTotal}</p>
-                            <p>{totalItems}</p>
+                            <p></p>
                             
                             <hr/>
                             <Button variant="outline-success" onClick={() => buyAll()}>Buy Everything</Button>

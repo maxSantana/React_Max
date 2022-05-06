@@ -10,11 +10,7 @@ function ItemDetail({item} ) {
 
 const { addToCart } = useCartContext()    
 
-function handleOnAdd (q){
-  addToCart({item}, q)
-  
-                  }
-
+function handleOnAdd (){}
   return (
     <Container fluid>
         <Row md={2}>
@@ -26,7 +22,7 @@ function handleOnAdd (q){
                       </Card>
                 </Row>
                 <Row>
-                            <div><ItemCount handleOnAdd={handleOnAdd} addToCart={addToCart} stock={item.stock}/>
+                            <div><ItemCount item={item} handleOnAdd={handleOnAdd} addToCart={addToCart} stock={item.stock}/>
                               
                             </div>
                 </Row>

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 
 
 export const CartContext = createContext({});
@@ -7,7 +7,7 @@ export const useCartContext = () => useContext(CartContext)
 const CartContextProvider = ({ children }) => {
 
   const [cart, setCart] = useState([])
-
+  
   const addToCart = (item) => {
           const indexItem = cart.findIndex((cartItem) => cartItem.id === item.id);
           if (indexItem !== -1) {
@@ -28,8 +28,8 @@ const CartContextProvider = ({ children }) => {
         const index = cart.findIndex(cartItem => cartItem.id === id);
         if (index !== -1) {
             let newCart = [...cart];
-            newCart[index].count--;
-            if (newCart[index].count === 0) {
+            newCart[index].counter--;
+            if (newCart[index].counter === 0) {
                 newCart.splice(index, 1,);
             }
             setCart(newCart);
@@ -40,9 +40,9 @@ const CartContextProvider = ({ children }) => {
         const index = cart.findIndex(cartItem => cartItem.id === id);
         if (index !== -1) {
             let newCart = [...cart];
-            newCart[index].count++;
-            if (newCart[index].count > stock) {
-                newCart[index].count = stock;
+            newCart[index].counter++;
+            if (newCart[index].counter > stock) {
+                newCart[index].counter = stock;
             }
             setCart(newCart);
         }
@@ -59,9 +59,8 @@ const CartContextProvider = ({ children }) => {
     
     let valorTotal = cant();
     let totalItems = cantItems();
-    useEffect(() => {
-        
-    }, [])
+    
+  
   return (
             <CartContext.Provider value={{cart, addToCart, removeFromCart, removeOne, addOne, clearCart, valorTotal, totalItems}}>
               {children}
