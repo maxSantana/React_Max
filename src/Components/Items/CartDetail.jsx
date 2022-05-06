@@ -9,7 +9,7 @@ import { Container, Row } from 'react-bootstrap';
 
 export default function CartDetail() {
 
-  const {cart, clearCart, removeFromCart, buyAll, valorTotal, totalItems} = useContext(CartContext);
+  const {cart, clearCart, removeFromCart, removeOne, addOne, buyAll, valorTotal, totalItems} = useContext(CartContext);
   console.log(cart);
 
   return (
@@ -27,11 +27,14 @@ export default function CartDetail() {
                                     
                                     
                                             <div className="ms-2 me-auto">
-                                       
+                                                
                                                 <div className="fw-bold">{item.nombre}</div>
                                                 <div className="fw-bold">{item.descripcion}</div>
-                                                <div> $ {item.precio} - Cantidad: {item.quantity}</div>
+                                                <div> $ {item.precio} - Cantidad: {item.count}</div>
+                                                <div className="fw-bold">{item.precio*item.count}</div>
+                                                <Button variant="outline-secondary" onClick={() => addOne(item.id,item.stock)}>+</Button>
                                                 <Button variant="outline-secondary" onClick={() => removeFromCart(item.id)}>Eliminar</Button>
+                                                <Button variant="outline-secondary" onClick={() => removeOne(item.id)}>-</Button>
                                                 
                                             </div>
 

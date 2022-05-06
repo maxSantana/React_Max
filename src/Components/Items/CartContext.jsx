@@ -22,6 +22,31 @@ const CartContextProvider = ({ children }) => {
 
   const removeFromCart = (id) => {
       setCart(cart.filter(p => p.id !== id)) };
+      
+      
+  const removeOne = (id) => {
+        const index = cart.findIndex(cartItem => cartItem.id === id);
+        if (index !== -1) {
+            let newCart = [...cart];
+            newCart[index].count--;
+            if (newCart[index].count === 0) {
+                newCart.splice(index, 1,);
+            }
+            setCart(newCart);
+        }
+
+    }
+   const addOne=(id,stock)=>{
+        const index = cart.findIndex(cartItem => cartItem.id === id);
+        if (index !== -1) {
+            let newCart = [...cart];
+            newCart[index].count++;
+            if (newCart[index].count > stock) {
+                newCart[index].count = stock;
+            }
+            setCart(newCart);
+        }
+    }
     
     const clearCart = () => setCart([]);
 
@@ -38,7 +63,7 @@ const CartContextProvider = ({ children }) => {
         
     }, [])
   return (
-            <CartContext.Provider value={{cart, addToCart, removeFromCart, clearCart, valorTotal, totalItems}}>
+            <CartContext.Provider value={{cart, addToCart, removeFromCart, removeOne, addOne, clearCart, valorTotal, totalItems}}>
               {children}
             </CartContext.Provider>
           )
