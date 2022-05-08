@@ -9,7 +9,7 @@ const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([])
   
   const addToCart = (item) => {
-          const indexItem = cart.findIndex((cartItem) => cartItem.id === item.id);
+          const indexItem = cart.findIndex(p => p.id === item.id);
           if (indexItem !== -1) {
             const cartCopy = [...cart];
             cartCopy[indexItem].counter = cartCopy[indexItem].counter + item.counter;
@@ -25,7 +25,7 @@ const CartContextProvider = ({ children }) => {
       
       
   const removeOne = (id) => {
-        const index = cart.findIndex(cartItem => cartItem.id === id);
+        const index = cart.findIndex(p => p.id === id);
         if (index !== -1) {
             let newCart = [...cart];
             newCart[index].counter--;
@@ -37,7 +37,7 @@ const CartContextProvider = ({ children }) => {
 
     }
    const addOne=(id,stock)=>{
-        const index = cart.findIndex(cartItem => cartItem.id === id);
+        const index = cart.findIndex(p => p.id === id);
         if (index !== -1) {
             let newCart = [...cart];
             newCart[index].counter++;

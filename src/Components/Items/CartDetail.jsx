@@ -9,7 +9,7 @@ import { Container, Row } from 'react-bootstrap';
 
 export default function CartDetail() {
 
-  const {cart, clearCart, removeFromCart, removeOne, addOne, buyAll, valorTotal,/* valorTotal, totalItems*/} = useContext(CartContext);
+  const {cart, clearCart, removeFromCart, removeOne, addOne, valorTotal,/* valorTotal, totalItems*/} = useContext(CartContext);
   console.log(cart);
 
   return (
@@ -52,9 +52,9 @@ export default function CartDetail() {
                             <p></p>
                             
                             <hr/>
-                            <Button variant="outline-success" onClick={() => buyAll()}>Buy Everything</Button>
+                            <Button as={Link} to="/FormularioCompra" variant="outline-success">Finalizar compra</Button>
                             <hr/>
-                            <Button variant="outline-secondary" onClick={() => clearCart()}>Clean cart</Button>
+                            <Button variant="outline-secondary" onClick={() => clearCart()}>Limpiar el carrito</Button>
                         </div>}
             </Row>  
         </Container>
