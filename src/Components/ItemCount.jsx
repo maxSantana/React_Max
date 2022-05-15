@@ -21,15 +21,27 @@ export default function ItemCount ({stock, handleOnAdd, item, addToCart}) {
         <Container>
           <Row>
             <Col>
-              <Button className="Incremento" onClick={Incremento} variant="success" size="sm">+</Button>
+              <div className="d-grid gap-2">
+                <Button className="Incremento" onClick={Incremento} variant="success" size="xs">+</Button>
+                <Button className="Decremento" onClick={Decremento} variant="danger" size="xs">-</Button>
+              </div>
+              
+            </Col>
+            <Col> <Form.Control placeholder={counter} /> </Col>
+          </Row>
+          <br />
+           <Row> 
+
+            <Col>
+            <div className="d-grid gap-2">
+            <Button variant="outline-primary" size="lg" onClick={()=>{addToCart({...item, counter});handleOnAdd()}}>Agregar al carrito</Button>
+            </div>
+            
             </Col>
             <Col>
-            <Button variant="danger" size="sm" onClick={()=>{addToCart({...item, counter});handleOnAdd()}}>Agregar al carrito</Button>
-            <Button variant="danger" size="sm"><Link to="/Cart">Ir al carrito</Link></Button>
-            <Form.Control placeholder={counter}/>
-            </Col>
-            <Col>
-              <Button className="Decremento" onClick={Decremento} variant="danger" size="sm">-</Button>
+            <div className="d-grid gap-2">
+            <Button variant="outline-primary" size="lg"><Link to="/Cart">Ir al carrito</Link></Button>
+            </div>
             </Col>
              </Row>
         </Container>

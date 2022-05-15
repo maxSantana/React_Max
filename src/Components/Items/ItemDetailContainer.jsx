@@ -34,17 +34,7 @@ function ItemDetailContainer () {
     return (
   
       <div>
-        <ItemDetail item={item}
-        
-                   // id={item.id} 
-                   // nombre={item.nombre}
-                   // precio={item.precio}
-                   // stock={item.stock}
-                   // setCantidad={item.setCantidad}
-                   // imagen={item.imagen}
-                   // imagen2={item.imagen2} 
-                   // texts={item.descripcion}                  
-                    />
+        <ItemDetail item={item}/>
       </div>
   )
 }

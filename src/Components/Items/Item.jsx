@@ -13,7 +13,7 @@ export function Item ({ id , imagen, nombre, precio}) {
               <Card.Img variant="top" src={imagen} />
               <Card.Body>
                 <Card.Title>{nombre}</Card.Title>
-                <Button className={s.Boton} variant="outline-primary"><Link to={`/item/${id}`}>Ver Detalles</Link></Button>
+                <Button className={s.Boton} variant="light"><Link to={`/item/${id}`}>Ver Detalles</Link></Button>
                 <Card.Text>
                 PRECIO: U$D {precio}
                 </Card.Text>

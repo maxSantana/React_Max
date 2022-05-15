@@ -17,21 +17,17 @@ function handleOnAdd (){}
           {/* Columna de imagen */}
               <Col>
                 <Row>
-                      <Card key={item.id}>
+                      <Card style={{ width: '30rem', margin: "0 auto"}} key={item.id}>
                         <Card.Img className={s.imagen} variant="top" src={item.imagen} />
                       </Card>
                 </Row>
-                <Row>
-                            <div><ItemCount item={item} handleOnAdd={handleOnAdd} addToCart={addToCart} stock={item.stock}/>
-                              
-                            </div>
-                </Row>
+                
               </Col>
 
           {/* Columna de Texto */}
               <Col>
               
-                    <Card style={{ width: '45rem' }}>
+                    <Card style={{ width: '41.5rem', margin: "0 auto" }}>
                       <Card.Img variant="top" className={s.imagen} src={item.imagen2} />
                       <Card.Body>
                         <Card.Title>{item.nombre}</Card.Title>
@@ -43,16 +39,11 @@ function handleOnAdd (){}
                     </Card>
                   <Card.Body>
                       
-                    <Row>
-                      <div className={s.Text}>
- 
-                          
-                      </div>
-                      
-                      <div>
-                         
-                      </div>
-                    </Row>
+                  <Row>
+                            <div>
+                              <ItemCount item={item} handleOnAdd={handleOnAdd} addToCart={addToCart} stock={item.stock}/>
+                            </div>
+                </Row>
                   </Card.Body>
               </Col>            
         </Row>  

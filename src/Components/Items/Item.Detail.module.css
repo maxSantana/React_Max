@@ -1,6 +1,5 @@
 .imagen{
     margin: 0 auto;
-    width: 100%;
 }
 .titulos{
     font-size: 30px;
@@ -13,7 +12,3 @@
     margin: 0 auto;
 }
 
-.imagen1{
-    margin: 0 auto;
-    width: 30%
-}
