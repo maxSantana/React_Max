@@ -5,10 +5,10 @@ import { CartContext } from './Items/CartContext'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import ListGroup from 'react-bootstrap/ListGroup';
-import { Col } from 'react-bootstrap'
+import { Col, Row, Card, Button } from 'react-bootstrap'
 
 function FormularioCompra() {
-    const { cart, valorTotal} = useContext(CartContext)
+    const { cart, clearCart, valorTotal} = useContext(CartContext)
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [orden, setOrden] = useState("")
     const [ordenId, setOrdenId] = useState("")
@@ -32,16 +32,20 @@ function terminarCompra(data) {
                   getDoc(orderRef).then((res) => {
                     setOrden(res);
                     setOrdenId(res.id);
+                    clearCart();
          })})}
          console.log(ordenId)
-        
+
+ 
       
   return (
     <div >
     
     {/*FORMULARIO DE COMPRA */}
     <ListGroup.Item as="li" className="d-flex justify-content-between align-items-start">
+     
       <Col>
+      <Row>
         {cart.length > 0 ? (
          
           <form onSubmit={handleSubmit(terminarCompra)}>
@@ -65,7 +69,7 @@ function terminarCompra(data) {
             {errors.phone?.type === 'pattern' && <p style={{ textAlign: "center", color: "red", fontWeight: "600" }}>Debe contener solo numeros </p>}
             </Col>
             <br />
-            <button onClick={()=> terminarCompra}>Realizar pedido</button>
+            <button onClick={terminarCompra}>Realizar pedido</button>
           </form>)
           
           :
@@ -73,10 +77,22 @@ function terminarCompra(data) {
             <h2> Carrito Vacio</h2>
             <Link to={"/"}><button>Ir a Comprar</button> </Link>
           </div>}
-          </Col>
-        <div>
-          {orden === "" ? "" : (<p> su Codigo de compra es : {ordenId}</p>)}
-        </div>
+          </Row>
+          <br />
+          <Row>
+        
+              <Card style={{ width: '18rem' , margin: '0 auto'}}>
+                <Card.Body>
+                  <Card.Title>{orden === "" ? "" : (<p>Codigo de compra es : {ordenId}</p>)}</Card.Title>
+                  <Card.Text>
+                    Gracias por tu compra, que disfrutes tu producto.
+                  </Card.Text>
+                  <Button variant="warning" ><Link to={"/"} style={{ textDecoration: "none"}}>Ir a la tienda </Link></Button>
+              </Card.Body>
+            </Card>
+          
+        </Row>
+        </Col>
     </ListGroup.Item>
   </div>
   

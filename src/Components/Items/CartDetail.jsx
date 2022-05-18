@@ -49,7 +49,7 @@ export default function CartDetail() {
                                             </Card>
                             </ListGroup.Item> ) : <div><Button as={Link} to="/" variant="outline-success">Back to shop</Button> <br/> 
                                 
-                        <h1>The cart is empty</h1>
+                        <h1>Carrito vacío!</h1>
                         </div> }
                         </div>
                 </ListGroup>

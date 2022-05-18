@@ -3,9 +3,9 @@ import ItemList from '../ItemList';
 // import {traerProductos} from '../Productos';
 import s from './ItemListContainer.module.css'
 import { useParams } from 'react-router-dom';
-import { doc, getDoc, getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
 import Card from 'react-bootstrap/Card'
-import { Button } from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
 
 
 function ItemListContainer () {
@@ -37,8 +37,9 @@ function ItemListContainer () {
     <>
       <br />
       <div>
-        <Card className="bg-dark text-white">
-          <Card.Img src="https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-purple-minimalistic-glare-music-notes-banner-background-image_210610.jpg" alt="Card image" />
+      <Row xs={1} md={2} className="g-4">
+        <Card style={{ height: '30%', width: '100%', margin: "0 auto"}} className="bg-dark text-white">
+          <Card.Img src="https://www.maxpixel.net/static/photo/1x/Header-Flame-Guitar-Bokeh-Banner-Wallpaper-Music-3567767.jpg" alt="Card image" />
           <Card.ImgOverlay>
             <Card.Title><h1> BIENVENIDO A E-MUSIC MAX STORE </h1></Card.Title>
             <Card.Text>
@@ -47,6 +48,7 @@ function ItemListContainer () {
             <Card.Text>Navega y no dudes en hacer todas las consultas que requieras</Card.Text>
           </Card.ImgOverlay>
         </Card>
+        </Row>
       </div>
       <br />
       <div className={s.ContainerI}>
